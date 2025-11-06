@@ -1,0 +1,12 @@
+{% extends 'blog/main.html' %}
+{% block main_section %}
+
+   <h2>Головна сторінка</h2>
+   {% for post in news %}
+   <h1>{{post.title}}</h1>
+   <p>{{ post.text }}</p>
+   <p>Автор: {{post.avtor}}, дата: {{ post.date}}</p>
+   
+   
+   {% endfor %}
+{% endblock main_section %}
