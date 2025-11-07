@@ -1,0 +1,24 @@
+{% extends 'blog/main.html' %}
+<!--вывод формы Регистрации -->
+    {% block main_section %}
+        <div class="form-section">
+            <h1 class="title_h2">Регістрація на сайті </h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Зареєструватися</button>
+            </form>
+            
+        </div>
+    {% endblock main_section %}
+<!--вывод новостей Контакты -->    
+    {% block aside_news_section %}
+        <div class="bg-primary p-3 mb-3 rounded">
+            <h3>Боковая панель - Контакты</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda aut, nulla sint ratione saepe quibusdam perspiciatis tempora nemo quas optio exercitationem sed voluptatem repellendus cupiditate odit iure, ducimus animi hic.</p>
+            <a href="#" class="btn btn-light">Детальніше</a>
+        </div>
+        <div class="p-3 mb-3">
+           <img src="https://avatars.mds.yandex.net/i?id=43f1a029d98aef8cb0091dba04947086_l-5292126-images-thumbs&n=27&h=480&w=480" class="img-fluid rounded" alt="Placeholder Image">
+        </div>
+    {% endblock aside_news_section %}
