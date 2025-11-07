@@ -1,6 +1,11 @@
 {% extends 'blog/main.html'%}
-{% block main_section %}
 
-<h2>Сторінка контактів</h2>
-
-{% endblock main_section %}
+<!--Новости в  Контакты -->
+    {% block main_section %}
+        {% for post in news_contact %}
+            <h1>{{post.title}}</h1>
+            <p>{{ post.text }}</p>
+            <p>Автор: {{post.avtor}}, дата: {{ post.date}}</p>
+        {% endfor %}
+    {% endblock main_section %}
+    

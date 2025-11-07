@@ -17,13 +17,34 @@ news = [
 
 ]
 
+news_contact = [
+    {
+        'title': 'Перша новина',
+        'text': 'Начепто тексту для першої новини',
+        'date': '1 yanuara 2025',
+        'avtor': 'Навальний'
+    },
+    {
+        'title': 'Друга новина',
+        'text': 'Начепто тексту для другої новини',
+        'date': '',
+        'avtor': 'Зеленський'
+    }
+
+]
+
+
 def home(request):
     data = {
         'news': news,
-        'title': 'Наша головна сторінка'
+        'title': 'Наша головна сторінка',        
     }
     return render(request, 'blog/home.html', data)
+
 def contaktu(request):
-    return render(request, 'blog/contaktu.html')
-def main_menu(request):
-    return render(request, 'blog/main_menu.html')
+    data = {
+        'news_contact': news_contact,
+        'title': 'Контакти MySite',        
+    }
+    return render(request, 'blog/contaktu.html', data)
+
