@@ -1,49 +1,30 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import News
 
-news = [
-    {
-        'title': '1 news',
-        'text': 'abra kadabra',
-        'date': '1 yanuara 2025',
-        'avtor': 'Greg'
-    },
-    {
-        'title': '2 news',
-        'text': 'abra kadabra',
-        'date': '1 september 2025',
-        'avtor': 'Yorik'
-    }
 
-]
 
-news_contact = [
+text_contact = [
     {
         'title': 'Наші контакти',
-        'text': 'Наша адреса: вул. Поштова 12, м. Київ, Україна. Телефон: +380 44 123 4567. Email:',
-        'date': '1 yanuara 2025',
-        'avtor': 'Навальний'
+        'text': 'вул. Поштова 12, м. Київ, Україна. Індекс 01001',
+        'avtor': 'Yorik Petrovich',
+        'email': 'harleyDavitson@gmail.com',
+        'phone': '+380671234567'
     },
-    {
-        'title': 'Друга новина',
-        'text': 'Начепто тексту для другої новини',
-        'date': '',
-        'avtor': 'Зеленський'
-    }
-
+    
 ]
 
 
 def home(request):
     data = {
-        'news': news,
+        'news': News.objects.all(),
         'title': 'Наша головна сторінка',        
     }
     return render(request, 'blog/home.html', data)
 
 def contaktu(request):
     data = {
-        'news_contact': news_contact,
+        'text_contact': text_contact,
         'title': 'Контакти MySite',        
     }
     return render(request, 'blog/contaktu.html', data)

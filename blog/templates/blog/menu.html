@@ -1,0 +1,69 @@
+{% extends 'blog/main.html'%}
+
+{% block menu %}    
+<!-- Навигационная панель -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">My Site Company
+                <div class="title_menu">
+                    Harley Davidson Club
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/blog/">Главная</a>
+                    </li>
+
+                    <!-- Новости -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Новости
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="contaktu/">Все новости</a></li>
+                            <li><a class="dropdown-item" href="#">Технологии</a></li>
+                            
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Спорт</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Футбол</a></li>
+                                    <li><a class="dropdown-item" href="#">Баскетбол</a></li>
+                                    <li><a class="dropdown-item" href="#">Хоккей</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li><a class="dropdown-item" href="#">Культура</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Контакты -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Контакты
+                        </a>
+                        <!-- <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Обратная связь</a></li>
+                            <li><a class="dropdown-item" href="#">Адрес</a></li>
+                            
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Социальные сети</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Telegram</a></li>
+                                    <li><a class="dropdown-item" href="#">Instagram</a></li>
+                                    <li><a class="dropdown-item" href="#">YouTube</a></li>
+                                </ul>
+                            </li>
+                            
+                        </ul>-->
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+{% endblock menu %}

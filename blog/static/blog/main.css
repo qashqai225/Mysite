@@ -1,0 +1,156 @@
+body {
+            background-color: #121212;
+            color: #e0e0e0;
+            min-height: 100vh;
+        }
+.title_menu {
+    color: #00bfff;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    font-weight: 500;
+}
+.title_h2 {
+    color: #00bfff;
+    font-size: 3rem;
+    margin-left: 1rem;
+    font-weight: 500;
+}
+.alert-light {  
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    color: #e0e0e0;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+
+}
+        .navbar-custom {
+            background-color: #1e1e1e !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            border-bottom: 1px solid #333;
+        }
+
+        .navbar-custom .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: #00bfff !important;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+
+        .navbar-custom .navbar-brand:hover {
+            color: #66d9ff !important;
+        }
+
+        .navbar-custom .nav-link {
+            color: #e0e0e0 !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem !important;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-custom .nav-link:hover,
+        .navbar-custom .nav-link:focus {
+            color: #00bfff !important;
+            background-color: #2a2a2a;
+        }
+
+        .navbar-custom .nav-link.active {
+            color: #00bfff !important;
+            background-color: #2a2a2a;
+            font-weight: 600;
+        }
+
+        .navbar-custom .dropdown-menu {
+            background-color: #2a2a2a;
+            border: none;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+            border-radius: 8px;
+            margin-top: 0.5rem;
+            min-width: 210px;
+            padding: 0.5rem 0;
+        }
+
+        .navbar-custom .dropdown-item {
+            color: #e0e0e0;
+            padding: 0.75rem 1.3rem;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid #333;
+            white-space: nowrap;
+        }
+
+        .navbar-custom .dropdown-item:hover,
+        .navbar-custom .dropdown-item:focus {
+            background-color: #333;
+            color: #00bfff;
+            padding-left: 1.6rem;
+        }
+
+        .navbar-custom .dropdown-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Подменю третьего уровня */
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        .dropdown-submenu .dropdown-menu {
+            top: 0;
+            right: 100%;
+            margin-top: -1px;
+            border-radius: 0 8px 8px 8px;
+            background-color: #333;
+        }
+
+        .dropdown-submenu > .dropdown-toggle::after {
+            content: ">";
+            float: right;
+            margin-top: 0.35rem;
+            font-size: 0.8rem;
+            color: #888;
+            border: none;
+        }
+
+        .dropdown-submenu:hover > .dropdown-menu {
+            display: block;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 991.98px) {
+            .navbar-custom .dropdown-menu {
+                background-color: #1e1e1e;
+                border: 1px solid #333;
+                box-shadow: none;
+                margin-top: 0;
+                border-radius: 6px;
+            }
+
+            .dropdown-submenu .dropdown-menu {
+                position: static;
+                left: auto;
+                float: none;
+                margin-left: 1rem;
+                border-radius: 6px;
+                background-color: #2a2a2a;
+            }
+
+            .dropdown-submenu > .dropdown-toggle::after {
+                content: "v";
+            }
+
+            .navbar-custom .nav-link {
+                border-radius: 0;
+            }
+        }
+
+        .container-content {
+            padding: 3rem 1rem;
+        }
+
+        .container-content h1 {
+            color: #00bfff;
+            margin-bottom: 1.5rem;
+        }

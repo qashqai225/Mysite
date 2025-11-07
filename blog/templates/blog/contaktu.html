@@ -1,11 +1,25 @@
 {% extends 'blog/main.html'%}
 
-<!--Новости в  Контакты -->
+<!--вывод текста Контакты -->
     {% block main_section %}
-        {% for post in news_contact %}
-            <h1>{{post.title}}</h1>
-            <p>{{ post.text }}</p>
-            <p>Автор: {{post.avtor}}, дата: {{ post.date}}</p>
+        {% for post in text_contact %}
+            <h1 class="title_h2">{{post.title}}</h1>
+            <div class="alert alert-light">
+            <p>Наша адреса:<br> {{ post.text }}</p>
+            <p>Наш робочій телефон:<br> {{ post.phone }}</p>
+            <p>Наш @mail:<br> {{ post.email }}</p>
+            <p>Автор: {{post.avtor}}</p>
+            </div>
         {% endfor %}
     {% endblock main_section %}
-    
+<!--вывод новостей Контакты -->    
+    {% block aside_news_section %}
+        <div class="bg-primary p-3 mb-3 rounded">
+            <h3>Боковая панель - Контакты</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda aut, nulla sint ratione saepe quibusdam perspiciatis tempora nemo quas optio exercitationem sed voluptatem repellendus cupiditate odit iure, ducimus animi hic.</p>
+            <a href="#" class="btn btn-light">Детальніше</a>
+        </div>
+        <div class="p-3 mb-3">
+           <img src="https://avatars.mds.yandex.net/i?id=43f1a029d98aef8cb0091dba04947086_l-5292126-images-thumbs&n=27&h=480&w=480" class="img-fluid rounded" alt="Placeholder Image">
+        </div>
+    {% endblock aside_news_section %}
