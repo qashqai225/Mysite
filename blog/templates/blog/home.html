@@ -6,7 +6,7 @@
          <div class="alert alert-light">
             <h1>{{post.title}}</h1>
             <p>{{ post.content }}</p>
-            <span>Дата публікації: {{post.date_posted}}</span>
+            <span>{{post.date_posted|date:"j F Y"}}</span>
             <p><b>Автор: {{post.author}}</b></p>
          </div>      
          {% endfor %}         
