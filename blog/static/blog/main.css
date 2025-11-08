@@ -25,6 +25,22 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 
 }
+.form-section {
+    background-color: #1e1e1e;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+.form-section h2 {
+    color: #00bfff;
+    margin-bottom: 1.5rem;
+}
+.form-text {
+    color: #888;
+}
         .navbar-custom {
             background-color: #1e1e1e !important;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);

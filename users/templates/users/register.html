@@ -1,12 +1,14 @@
 {% extends 'blog/main.html' %}
+{% load crispy_forms_tags %}
 <!--вывод формы Регистрации -->
     {% block main_section %}
         <div class="form-section">
             <h1 class="title_h2">Регістрація на сайті </h1>
-            <form method="post">
+            
+            <form method="POST">
                 {% csrf_token %}
-                {{ form.as_p }}
-            <button type="submit" class="btn btn-primary">Зареєструватися</button>
+                {{ form|crispy }}
+                <button type="submit" class="btn btn-primary">Зареєструватися</button>
             </form>
             
         </div>
