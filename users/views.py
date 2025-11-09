@@ -9,7 +9,7 @@ def register(request):
             form.save()
             username = form.cleaned_data.get('username')
             messages.success(request, f'Обліковий запис для {username} створено успішно!')
-            return redirect('blog-home')
+            return redirect('user')
     else:
         form = UserRegForm()
     

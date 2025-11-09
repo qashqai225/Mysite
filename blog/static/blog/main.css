@@ -38,6 +38,9 @@ body {
     color: #00bfff;
     margin-bottom: 1.5rem;
 }
+.form-control {
+    width: 40%;
+}
 .form-text {
     color: #888;
 }
