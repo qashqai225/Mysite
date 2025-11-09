@@ -80,18 +80,18 @@
             {% if user.is_authenticated %}
     <form  action="{% url 'exit' %}" method="post" style="display: inline;">
         {% csrf_token %}
-        <button type="submit" class="btn btn-primary">Вихід</button>
+        <button type="submit" class="nav-link">Вихід</button>
     </form>
+    <a class="nav-link" href="{% url 'profile' %}">Профіль {{user.username}}</a>
 {% else %}
     <a class="nav-link" href="{% url 'user' %}" class="btn btn-primary">Увійти</a>
+    <a class="nav-link" href="{% url 'register' %}">Регістрація</a>
 {% endif %}
-            <a class="nav-link" href="{% url 'register' %}">Регістрація</a>
+            
             
         </div>
     </nav>
-  {% block menu %}
-    {% endblock menu %}
-
+ 
     <main class="container">
         <div class="row">
             <div class="col-md-8">
