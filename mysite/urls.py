@@ -3,6 +3,8 @@ from django.contrib import admin
 from django.urls import path, include
 from users import views as userViews
 from django.contrib.auth import views as authViews
+from django.conf import settings
+from django.conf.urls.static import static    
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -13,5 +15,8 @@ urlpatterns = [
     template_name='users/exit.html',
     next_page=None  # Отключаем редирект, чтобы показать шаблон
 ), name='exit'),
-    path('', include('blog.urls'))
+    path('', include('blog.urls'))  
+        
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -4,7 +4,14 @@
         <div class="form-section">
             <h1 class="title_h2">Профіль користувача {{user.username}}</h1>
             <p>Вітаємо в вашому профілі!</p>
-        </div>
+            <div class="profile-info">
+                <img src="{{ user.profile.img.url }}" width="120"  alt="Profile Image" class="profile-image">
+                <br><p></p>
+                <p><strong>Ім'я користувача:</strong> {{ user.username }}</p>
+                <p><strong>Email:</strong> {{ user.email }}</p>
+                <p><strong>Телефон:</strong> {{ user.profile.tell }}</p>
+            </div>            
+        </div>        
     {% endblock main_section %}
 <!--вывод новостей Контакты -->    
     {% block aside_news_section %}
